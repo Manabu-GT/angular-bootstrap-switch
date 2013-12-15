@@ -14,6 +14,7 @@ angular.module('frapontillo.bootstrap-switch', [])
       transclude: true,
       scope: {
         ngModel: '=',
+        switchChange: '&',
         switchActive: '@',
         switchSize: '@',
         switchOn: '@',
@@ -97,6 +98,7 @@ angular.module('frapontillo.bootstrap-switch', [])
                 scope.$apply(function() {
                   scope.ngModel = value;
                 });
+                scope.switchChange();
               }
             });
           };
